@@ -56,7 +56,7 @@ El sistema está dividido en dos módulos principales:
 │   └── 📄 BladeRF_P2.txt
 │
 ├── 📄 README.md
-└── 📄 Informe_Practica3_IEEE.pdf
+└── 📄 Práctica_3 - Redes_Inalámbricas.pdf
 ```
 
 Cada carpeta de **Prueba 1** y **Prueba 2** contiene los códigos MATLAB (`.m`), archivos de señal (`.sc16q11`) y configuraciones CLI utilizadas para replicar los experimentos reales con el dispositivo SDR.
@@ -96,7 +96,12 @@ Estas carpetas permiten replicar fácilmente las pruebas descritas en el informe
 
 ### Transmisión
 
-1. Configurar el transmisor:
+1. Ejecutar en MATLAB:
+   ```matlab
+   tx_qpsk_final('nota20.png', 'P3PruebaFF1.sc16q11');
+   ```
+   
+2. Configurar el transmisor:
    ```bash
    set frequency tx1 920M
    set samplerate tx1 2M
@@ -104,11 +109,6 @@ Estas carpetas permiten replicar fácilmente las pruebas descritas en el informe
    set gain tx1 50
    tx config file=P3PruebaFF1.sc16q11 format=bin repeat=1
    tx start; tx wait
-   ```
-
-2. Ejecutar en MATLAB:
-   ```matlab
-   tx_qpsk_final('nota20.png', 'P3PruebaFF1.sc16q11');
    ```
 
 ### Recepción
@@ -156,9 +156,9 @@ Todos los resultados y figuras están disponibles en el informe PDF y en el repo
 
 **Rony Ticona**  
 Proyecto académico — Práctica 3  
-Escuela de Ingeniería Electrónica  
-Universidad Nacional Mayor de San Marcos  
-📧 ronyticona1@gmail.com  
+Escuela Profesional de Ingeniería de Telecomunicaciones  
+Universidad Nacional San Agustín de Arequipa 
+📧 rticonay@unsa.edu.pe
 
 ---
 
