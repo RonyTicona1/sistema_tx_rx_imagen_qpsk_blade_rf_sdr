@@ -1,0 +1,16 @@
+
+TX
+---------------------------------
+bladeRF-cli -i
+set frequency tx1 920M; set samplerate tx1 2M; set bandwidth tx1 2M
+set agc off; set gain tx1 50
+tx config file=P3PruebaFF1.sc16q11 format=bin repeat=1
+tx start; tx wait
+
+RX
+---------------------------------
+set frequency rx 920M; set samplerate rx1 2M; set bandwidth rx1 2M
+set agc off; set gain rx1 15
+rx config file= P3PruebaFF1.sc16q11 format=bin n=0
+tx start
+tx stop
